@@ -1,0 +1,91 @@
+.navbar{
+    position: sticky;
+    top: 0;
+    background: #0f172a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+    
+
+.logo{
+
+   font-size: 22px;
+   font-weight: bold;
+   color: #22c55e;
+
+}
+ nav{
+    display: flex;
+    align-items: center;
+    gap: 22px;
+ }
+ nav a, nav span{
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+ }
+ nav a:hover, nav span:hover{
+    color: #22c55e;
+ }
+ .active{
+    color: #22c55e;
+ }
+ .dropdown{
+    position: relative;
+ }
+ .dropdown-menu{
+    position: absolute;
+    top: 35px;
+    background: #1e293b;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    min-width: 170px;
+    border-radius: 8px;
+ }
+ .dropdown-menu a{
+    padding: 8px;
+
+ }
+ .login-btn{
+    border: 1px solid #22c55e;
+    padding:6px 14px;
+    border-radius: 6px;
+ }
+ .whatsapp-btn{
+    background: #22c55e;
+    padding: 7px 15px;
+    border-radius: 6px;
+    color: black;
+    font-weight: bold;
+ }
+ .menu-btn{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+ }
+
+ @media (max-width:900px){
+
+    nav{
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #0f172a;
+        flex-direction: column;
+        width: 250px;
+        padding: 20px;
+        display: none;
+
+    }
+    nav.open{
+        display: flex;
+    }
+    .menu-btn{
+        display: block;
+    }
+ }

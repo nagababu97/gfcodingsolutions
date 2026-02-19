@@ -1,0 +1,35 @@
+<header class="navbar">
+    <div class="logo"> Gf Coding Solution</div>
+
+    <nav [class.open] = "isMenuOpen">
+        <a routerLink="/" routerLinkActive="active">Home</a>
+
+        <div class="dropdown">
+            <span (click) = "toggleServices()">Services</span>
+            <div class="dropdown-menu" If="isServiceOpen">
+                <a routerLink="/web-development">Web Development</a>
+                <a routerLink="/chatbot">Whatsapp chatbot</a>
+                <a routerLink="/crm">CRM Development</a>
+                <a routerLink="/api">API Integration</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <span (click) =" toggleProducts()">Products</span>
+            <div class="dropdown-menu" If="isProductOpen">
+                <a routerLink="/auto-reply-bot">Auto Reply Bot</a>
+                <a routerLink="/billing" >Billing Software</a>
+                <a routerLink="/school">School Management</a>
+
+            </div>
+        </div>
+        <a routerLink="/login" class="login-btn">Login</a>
+
+        <a href="https://wa.me/917993618458?text=Hi%20I%20need%20details"
+             class="whatsapp-btn"
+            traget="_blank">
+            Whatsapp
+        </a>
+      
+    </nav>
+    <div class="menu-btn" (click)="toggleMenu()">toggle menu</div>
+</header>
